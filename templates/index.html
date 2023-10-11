@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <div class="container">
+      <form method="post">
+        {% csrf_token %}
+        <input type="" placeholder="enter latitude" name="latitude" required />
+        <input
+          type="number"
+          placeholder="enter longitude"
+          name="longitude"
+          step="0.00001"
+          required
+        />
+        <input type="submit" value="search" />
+      </form>
+      <div>
+        <h1>Temperature: {{temperature}} kelvin</h1>
+      </div>
+      <div>
+        <p>Feels like : {{feels_like}}</p>
+      </div>
+      <div>
+        <p>{{description}}</p>
+      </div>
+    </div>
+  </body>
+</html>
