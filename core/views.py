@@ -13,8 +13,8 @@ def index(request):
         latitude = request.POST.get('latitude')
         longitude = request.POST.get('longitude')
 
-    appid = '0db8b81e1f8b489f5b675cefc6e3ed27'
-    URL = 'https://api.openweathermap.org/data/2.5/weather'
+    appid = '1234'
+    URL = 'openweathermap'
     PARAMETERS = {'lat': latitude, 'lon': longitude, 'appid': appid}
     r = requests.get(url=URL, params=PARAMETERS)
     res = r.json()
